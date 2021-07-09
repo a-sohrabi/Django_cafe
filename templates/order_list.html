@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order list</title>
+</head>
+<body>
+<table>
+    {% for order in Orders %}
+    <li>
+        <a href="/cafe/{{ order.id }}">
+            {{ order.number }}
+            {{ order.status }}
+        </a>
+    </li>
+    {% endfor %}
+</table>
+
+
+</body>
+</html>
