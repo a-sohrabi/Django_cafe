@@ -16,11 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from cafe.views import order_list
+from cafe.views import order_list, order_detail
 
 urlpatterns = [
 
     path('order_list', order_list, name='order_list'),
-    path('order_detail', o)
+    path('order_detail', order_detail, name='order_detail')
 
 ]
