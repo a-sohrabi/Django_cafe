@@ -8,7 +8,8 @@ from cafe.models import Orders, MenuItems
 # Create your views here.
 
 def order_list(request):
-    orders = Orders.objects.all()
+    orders={}
+    orders['data'] = Orders.objects.get(id=id)
     return render(request, 'order_list.html', orders)
 
 

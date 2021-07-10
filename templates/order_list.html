@@ -6,14 +6,13 @@
 </head>
 <body>
 <table>
-    {% for order in Orders %}
+
     <li>
-        <a href="/cafe/{{ order.id }}">
-            {{ order.number }}
-            {{ order.status }}
+        <a href="/cafe/{{ Orders.id }}">
+            {{ Orders.number }}
+            {{ Orders.status }}
         </a>
-    </li>
-    {% endfor %}
+
 </table>
 
 
