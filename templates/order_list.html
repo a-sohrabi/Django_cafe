@@ -5,15 +5,16 @@
     <title>Order list</title>
 </head>
 <body>
-<table>
+<ul>
 
-    <li>
-        <a href="/cafe/{{ Orders.id }}">
-            {{ Orders.number }}
-            {{ Orders.status }}
+    {% for object in object_list %}
+
+            <li> {{ object.number }}</li>
+
+            <li>{{ object.status }}</li>
         </a>
-
-</table>
+    {% endfor %}
+</ul>
 
 
 </body>

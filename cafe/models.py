@@ -2,10 +2,12 @@ from django.db import models
 
 
 # Create your models here.
+
+
 class MenuItems(models.Model):
-    name = models.CharField(max_length=20)
-    price = models.IntegerField()
-    category = models.CharField(max_length=20)
+    name = models.CharField(max_length=20, verbose_name='Enter your item name', help_text='', blank=False)
+    price = models.IntegerField(verbose_name='Enter the price(IRR)', help_text='')
+    category = models.CharField(max_length=20, help_text='Category', verbose_name='Select category')
     discount = models.IntegerField()
     serving_time_period = models.TimeField()
     estimated_cooking_time = models.TimeField()

@@ -16,11 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from cafe.views import order_detail
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('cafe/', include('cafe.urls')),
-    path('<id>', order_detail)
+
 
 ]
