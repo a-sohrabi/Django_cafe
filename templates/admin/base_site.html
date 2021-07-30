@@ -1,0 +1,21 @@
+{% extends "admin/base.html" %}
+
+{% block title %}{% if subtitle %}{{ subtitle }} | {% endif %}cafe admin{% endblock %}
+
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">Cafe</a></h1>
+{% endblock %}
+{% block extrahead %}
+    <style>
+    @font-face {
+        font-family: "Agency FB";
+    }
+    :root {
+        --primary: #2e7841;
+        --secondary: #6b6cb6;
+    }
+    </style>
+
+{% endblock %}
+
+{% block nav-global %}{% endblock %}

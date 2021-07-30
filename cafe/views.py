@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_list_or_404
 from django.views.generic import ListView, DetailView
 
-from cafe.models import *
+from .models import *
 
 
 # Create your views here.
@@ -42,16 +42,17 @@ def home(request):
 
 
 def about_us(request):
-    return render(request, 'about_us.html')
+    about_ = User.objects.all()
+    return render(request, 'about_us.html',  {'about_us': about_})
 
 
 def contact(request):
     contact_ = User.objects.all()
-    return render(request, 'contact.html',  {'home': contact_})
+    return render(request, 'contact.html',  {'contact': contact_})
 
 
 def menu_list(request):
     menu_list_ = User.objects.all()
-    return render(request, 'cafe/menu_list.html', {'home': menu_list_})
+    return render(request, 'menu_list.html', {'menu_list': menu_list_})
 
 
